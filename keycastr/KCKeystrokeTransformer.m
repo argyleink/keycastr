@@ -151,14 +151,14 @@ static NSString* kLeftTabString = @"\xe2\x87\xa4";
 		[mutableResponse appendString:kCommandKeyString];
 	}
 
-	if (isShifted && !isCommand)
-	{
-        NSString *tmp = [@(_keyCode) isEqualToNumber:@48] ? kLeftTabString : keystroke.charactersIgnoringModifiers;
-		if (tmp) {
-			[mutableResponse appendString:tmp];
-			return mutableResponse;
-		}
-	}
+	// if (isShifted && !isCommand)
+	// {
+ //        NSString *tmp = [@(_keyCode) isEqualToNumber:@48] ? kLeftTabString : keystroke.charactersIgnoringModifiers;
+	// 	if (tmp) {
+	// 		[mutableResponse appendString:tmp];
+	// 		return mutableResponse;
+	// 	}
+	// }
 
 	id tmp = [[self _specialKeys] objectForKey:@(_keyCode)];
 	if (tmp != nil)
